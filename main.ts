@@ -542,17 +542,17 @@ namespace eureka_blocks {
 
 //% color="#3943c6" block="ﾕｰﾚｶ車" icon="\uf1b9"
 namespace eureka_blocks_car {
-  //% color="#f071bd" weight=18 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="基本の動き"
+  //% color="#f071bd" weight=18 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="1　センサー"
   export function phto_R() {
     return Math.round((pins.analogReadPin(AnalogPin.P2) / 1023) * 100);
   }
 
-  //% color="#f071bd" weight=18 blockId=auto_photo_L block="左ﾌｫﾄﾘﾌﾚｸﾀｰ" group="基本の動き"
+  //% color="#f071bd" weight=18 blockId=auto_photo_L block="左ﾌｫﾄﾘﾌﾚｸﾀｰ" group="1　センサー"
   export function phto_L() {
     return Math.round((pins.analogReadPin(AnalogPin.P1) / 1023) * 100);
   }
 
-  //% weight=20 blockId=sonar_ping_2 block="きょりｾﾝｻ" group="基本のうごき"
+  //% weight=20 blockId=sonar_ping_2 block="きょりｾﾝｻ" group="1　センサー"
   export function ping() {
     // send
     pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
@@ -566,7 +566,7 @@ namespace eureka_blocks_car {
     return Math.idiv(d, 58);
   }
 
-  //% weight=19 block="きょりが |%limit| cmより小さく" group="基本のうごき"
+  //% weight=19 block="きょりが |%limit| cmより小さく" group="1　センサー"
   //% limit.min=0 limit.max=50
   export function sonar_ping_3(limit: number): boolean {
     // send
@@ -585,7 +585,7 @@ namespace eureka_blocks_car {
     }
   }
 
-  //% color="#40a6ff" weight=17 blockId=auto_white_LED block="前照灯 |%mode| " group="基本のブロック"
+  //% color="#40a6ff" weight=17 blockId=auto_white_LED block="前照灯 |%mode| " group="2　ライト"
   export function white_LED(mode: onoff) {
     if (mode == onoff.ON) {
       led.enable(false);
@@ -596,7 +596,7 @@ namespace eureka_blocks_car {
     }
   }
 
-  //% color="#40a6ff" weight=17 blockId=auto_red_LED block="ﾌﾞﾚｰｷﾗﾝﾌﾟ |%mode| " group="基本のブロック"
+  //% color="#40a6ff" weight=17 blockId=auto_red_LED block="ﾌﾞﾚｰｷﾗﾝﾌﾟ |%mode| " group="2　ライト"
   export function red_LED(mode: onoff) {
     if (mode == onoff.ON) {
       led.enable(false);
