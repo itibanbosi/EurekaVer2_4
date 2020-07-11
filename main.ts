@@ -608,7 +608,7 @@ namespace eureka_blocks_car {
   }
 
   //% blockId=servos_forward
-  //% block="↑ 出力調整 左へ |%le| 右へ" group="基本のうごき"
+  //% block="前 出力調整 左へ |%le| 右へ" group="基本のうごき"
   //% le.min=-30 le.max=30
   export function forward(le: number): void {
     pins.servoWritePin(AnalogPin.P14, 30 + le);
@@ -616,21 +616,21 @@ namespace eureka_blocks_car {
   }
 
   //% blockId=servos_backward
-  //% block="↓" group="基本のうごき"
+  //% block="後ろ" group="基本のうごき"
   export function backward(): void {
     pins.servoWritePin(AnalogPin.P14, 180);
     pins.servoWritePin(AnalogPin.P13, 0);
   }
 
   //% blockId=servos_left
-  //% block="←" group="基本のうごき"
+  //% block="左" group="基本のうごき"
   export function left(): void {
     pins.servoWritePin(AnalogPin.P13, 0);
     pins.servoWritePin(AnalogPin.P14, 0);
   }
 
   //% blockId=servos_right
-  //% block="→" group="基本のうごき"
+  //% block="右" group="基本のうごき"
   export function right(): void {
     pins.servoWritePin(AnalogPin.P13, 180);
     pins.servoWritePin(AnalogPin.P14, 180);
@@ -644,7 +644,7 @@ namespace eureka_blocks_car {
   }
 
   //% blockId=servos_neutral
-  //% block="サーボをニュートラルにします" group="設定"
+  //% block="サーボをニュートラルにします" group="基本の動き"
   export function neutral(): void {
     pins.digitalWritePin(DigitalPin.P13, 0);
     pins.digitalWritePin(DigitalPin.P14, 0);
