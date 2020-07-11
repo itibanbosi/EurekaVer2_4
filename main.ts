@@ -541,7 +541,10 @@ namespace eureka_blocks {
 }
 
 //% color="#3943c6" block="ﾌﾟﾛｸﾞﾗﾐﾝｸﾞｶｰ" icon="\uf1b9"
-namespace eureka_blocks_car {
+
+  let le=0
+
+  namespace eureka_blocks_car {
   //% color="#f071bd" weight=18 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="1　センサー"
   export function phto_R() {
     return Math.round((pins.analogReadPin(AnalogPin.P2) / 1023) * 100);
@@ -638,36 +641,36 @@ namespace eureka_blocks_car {
   //% color="#3943c6" weight=9 blockId=servos_backward
   //% block="後ろ" group="基本の動き"
   export function backward(): void {
-    pins.servoWritePin(AnalogPin.P14, 180);
-    pins.servoWritePin(AnalogPin.P13, 0);
+    pins.servoWritePin(AnalogPin.P14, 180 + le);
+    pins.servoWritePin(AnalogPin.P13, 0 + le);
   }
 
   //% color="#3943c6" weight=8 blockId=servos_left
   //% block="左" group="基本の動き"
   export function left(): void {
-    pins.servoWritePin(AnalogPin.P13, 0);
-    pins.servoWritePin(AnalogPin.P14, 0);
+    pins.servoWritePin(AnalogPin.P13, 0 + le);
+    pins.servoWritePin(AnalogPin.P14, 0 + le);
   }
 
   //% color="#3943c6" weight=8 blockId=servos_F_left
   //% block="左前" group="基本の動き"
   export function F_left(): void {
-    pins.servoWritePin(AnalogPin.P13, 140);
-    pins.servoWritePin(AnalogPin.P14, 0);
+    pins.servoWritePin(AnalogPin.P13, 140 + le);
+    pins.servoWritePin(AnalogPin.P14, 0 + le);
   }
   
   //% color="#3943c6" weight=7 blockId=servos_right
   //% block="右" group="基本の動き"
   export function right(): void {
-    pins.servoWritePin(AnalogPin.P13, 180);
-    pins.servoWritePin(AnalogPin.P14, 180);
+    pins.servoWritePin(AnalogPin.P13, 180 + le);
+    pins.servoWritePin(AnalogPin.P14, 180 + le);
   }
 
   //% color="#3943c6" weight=7 blockId=servos_F_right
   //% block="右前" group="基本の動き"
   export function F_right(): void {
-    pins.servoWritePin(AnalogPin.P13, 180);
-    pins.servoWritePin(AnalogPin.P14, 50);
+    pins.servoWritePin(AnalogPin.P13, 180 + le);
+    pins.servoWritePin(AnalogPin.P14, 50 + le);
   }
 
 
