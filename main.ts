@@ -540,7 +540,7 @@ namespace eureka_blocks {
   }
 }
 
-//% color="#3943c6" block="ﾌﾟﾛｸﾞﾗﾐﾝｸﾞｶｰ" icon="\uf1b9"
+//% color="#3943c6" block="ユーレカ自動車" icon="\uf1b9"
 
   let con_le=0
 
@@ -632,7 +632,7 @@ namespace eureka_blocks {
 
   //% color="#3943c6" weight=10　blockId=servos_condition
   //% block="出力調整 左へ |%le| 右へ" group="基本の動き"
-  //% le.min=-30 le.max=30
+  //% le.min=-20 le.max=20
   export function condition(le: number): void {
   con_le=le;
     }
@@ -640,43 +640,30 @@ namespace eureka_blocks {
     //% color="#3943c6" weight=10　blockId=servos_forward
   //% block="前" group="基本の動き"
   export function forward(): void {
-    pins.servoWritePin(AnalogPin.P14, 30 + con_le);
-    pins.servoWritePin(AnalogPin.P13, 150 + con_le);
+    pins.servoWritePin(AnalogPin.P14, 20 + con_le);
+    pins.servoWritePin(AnalogPin.P13, 160 + con_le);
   }
 
   //% color="#3943c6" weight=9 blockId=servos_backward
   //% block="後ろ" group="基本の動き"
   export function backward(): void {
-    pins.servoWritePin(AnalogPin.P14, 180 + con_le);
-    pins.servoWritePin(AnalogPin.P13, 0 + con_le);
+    pins.servoWritePin(AnalogPin.P14, 160 + con_le);
+    pins.servoWritePin(AnalogPin.P13, 20 + con_le);
   }
 
   //% color="#3943c6" weight=8 blockId=servos_left
   //% block="左" group="基本の動き"
   export function left(): void {
-    pins.servoWritePin(AnalogPin.P13, 0 + con_le);
-    pins.servoWritePin(AnalogPin.P14, 0 + con_le);
+    pins.servoWritePin(AnalogPin.P13, 20 + con_le);
+    pins.servoWritePin(AnalogPin.P14, 20 + con_le);
   }
 
-  //% color="#3943c6" weight=8 blockId=servos_F_left
-  //% block="左前" group="基本の動き"
-  export function F_left(): void {
-    pins.servoWritePin(AnalogPin.P13, 140 + con_le);
-    pins.servoWritePin(AnalogPin.P14, 0 + con_le);
-  }
   
   //% color="#3943c6" weight=7 blockId=servos_right
   //% block="右" group="基本の動き"
   export function right(): void {
-    pins.servoWritePin(AnalogPin.P13, 180 + con_le);
-    pins.servoWritePin(AnalogPin.P14, 180 + con_le);
-  }
-
-  //% color="#3943c6" weight=7 blockId=servos_F_right
-  //% block="右前" group="基本の動き"
-  export function F_right(): void {
-    pins.servoWritePin(AnalogPin.P13, 180 + con_le);
-    pins.servoWritePin(AnalogPin.P14, 50 + con_le);
+    pins.servoWritePin(AnalogPin.P13, 160 + con_le);
+    pins.servoWritePin(AnalogPin.P14, 160 + con_le);
   }
 
 
