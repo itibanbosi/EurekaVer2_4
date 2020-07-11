@@ -37,6 +37,7 @@ enum L9110moter {
   gyakuten,
   seisi,
 }
+let con_le=0
 
 //% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.3"
 namespace eureka_blocks {
@@ -542,7 +543,7 @@ namespace eureka_blocks {
 
 //% color="#3943c6" block="ユーレカ自動車" icon="\uf1b9"
 
-  let con_le=0
+ 
 
   namespace eureka_blocks_car {
   //% color="#f071bd" weight=18 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="1　センサー"
