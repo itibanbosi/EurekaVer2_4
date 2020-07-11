@@ -540,7 +540,7 @@ namespace eureka_blocks {
   }
 }
 
-//% color="#3943c6" block="ﾕｰﾚｶ車" icon="\uf1b9"
+//% color="#3943c6" block="ﾌﾟﾛｸﾞﾗﾐﾝｸﾞｶｰ" icon="\uf1b9"
 namespace eureka_blocks_car {
   //% color="#f071bd" weight=18 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="1　センサー"
   export function phto_R() {
@@ -627,7 +627,7 @@ namespace eureka_blocks_car {
     }
   }
 
-  //% blockId=servos_forward
+  //% color="#3943c6" weight=10　blockId=servos_forward
   //% block="前 出力調整 左へ |%le| 右へ" group="基本のうごき"
   //% le.min=-30 le.max=30
   export function forward(le: number): void {
@@ -635,35 +635,35 @@ namespace eureka_blocks_car {
     pins.servoWritePin(AnalogPin.P13, 150 + le);
   }
 
-  //% blockId=servos_backward
+  //% color="#3943c6" weight=9 blockId=servos_backward
   //% block="後ろ" group="基本のうごき"
   export function backward(): void {
     pins.servoWritePin(AnalogPin.P14, 180);
     pins.servoWritePin(AnalogPin.P13, 0);
   }
 
-  //% blockId=servos_left
+  //% color="#3943c6" weight=8 blockId=servos_left
   //% block="左" group="基本のうごき"
   export function left(): void {
     pins.servoWritePin(AnalogPin.P13, 0);
     pins.servoWritePin(AnalogPin.P14, 0);
   }
 
-  //% blockId=servos_right
+  //% color="#3943c6" weight=7 blockId=servos_right
   //% block="右" group="基本のうごき"
   export function right(): void {
     pins.servoWritePin(AnalogPin.P13, 180);
     pins.servoWritePin(AnalogPin.P14, 180);
   }
 
-  //% blockId=servos_stop
+  //% color="#3943c6" weight=6 blockId=servos_stop
   //% block="止まる" group="基本のうごき"
   export function stop(): void {
     pins.servoWritePin(AnalogPin.P13, 90);
     pins.servoWritePin(AnalogPin.P14, 90);
   }
 
-  //% blockId=servos_neutral
+  //% color="#3943c6" weight=5 blockId=servos_neutral
   //% block="サーボをニュートラルにします" group="基本の動き"
   export function neutral(): void {
     pins.digitalWritePin(DigitalPin.P13, 0);
