@@ -649,8 +649,8 @@ namespace eureka_blocks {
     //% color="#3943c6" weight=10　blockId=servos_forward
   //% block="前 出力|%op| " group="基本の動き"
   export function forward(): void {
-    pins.servoWritePin(AnalogPin.P14, 20 + con_le);
-    pins.servoWritePin(AnalogPin.P13, 160 + con_le);
+    pins.servoWritePin(AnalogPin.P14, 90-90*con_op/100+20 + con_le);
+    pins.servoWritePin(AnalogPin.P13, 90+90*con_op/100-20 + con_le);
   }
 
   //% color="#3943c6" weight=9 blockId=servos_backward
