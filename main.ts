@@ -544,12 +544,12 @@ namespace eureka_blocks {
 namespace eureka_blocks_car {
   //% color="#f071bd" weight=18 blockId=auto_photo_R block="右ﾌｫﾄﾘﾌﾚｸﾀｰ" group="基本の動き"
   export function phto_R() {
-    return (pins.analogReadPin(AnalogPin.P2) / 1023) * 100;
+    return Math.round((pins.analogReadPin(AnalogPin.P2) / 1023) * 100);
   }
 
   //% color="#f071bd" weight=18 blockId=auto_photo_L block="左ﾌｫﾄﾘﾌﾚｸﾀｰ" group="基本の動き"
   export function phto_L() {
-    return (pins.analogReadPin(AnalogPin.P1) / 1023) * 100;
+    return Math.round((pins.analogReadPin(AnalogPin.P1) / 1023) * 100);
   }
 
   //% weight=20 blockId=sonar_ping_2 block="きょりｾﾝｻ" group="基本のうごき"
