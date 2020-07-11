@@ -552,6 +552,26 @@ namespace eureka_blocks_car {
     return Math.round((pins.analogReadPin(AnalogPin.P1) / 1023) * 100);
   }
 
+//% color="#d4b41f"  weight=17 block="右ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit| より小さい" group="1　センサー"
+  //% limit.min=0 limit.max=100
+  export function photo_R(limit: number): boolean {
+      if ((pins.analogReadPin(AnalogPin.P2) / 1023) * 100 < limit) {
+          return true;
+        } else {
+          return false;
+        }
+  }
+
+//% color="#d4b41f"  weight=17 block="左ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit| より小さい" group="1　センサー"
+  //% limit.min=0 limit.max=100
+  export function photo_L(limit: number): boolean {
+      if ((pins.analogReadPin(AnalogPin.P1) / 1023) * 100 < limit) {
+          return true;
+        } else {
+          return false;
+        }
+  }
+
   //% weight=20 blockId=sonar_ping_2 block="きょりｾﾝｻ" group="1　センサー"
   export function ping() {
     // send
