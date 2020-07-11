@@ -630,10 +630,15 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#3943c6" weight=10　blockId=servos_forward
-  //% block="前 出力調整 左へ |%le| 右へ" group="基本の動き"
+  //% color="#3943c6" weight=10　blockId=servos_condition
+  //% block="出力調整 左へ |%le| 右へ" group="基本の動き"
   //% le.min=-30 le.max=30
-  export function forward(le: number): void {
+  export function condition(le: number): void {
+    }
+  
+    //% color="#3943c6" weight=10　blockId=servos_forward
+  //% block="前" group="基本の動き"
+  export function forward(): void {
     pins.servoWritePin(AnalogPin.P14, 30 + le);
     pins.servoWritePin(AnalogPin.P13, 150 + le);
   }
