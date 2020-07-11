@@ -649,12 +649,27 @@ namespace eureka_blocks_car {
     pins.servoWritePin(AnalogPin.P14, 0);
   }
 
+  //% color="#3943c6" weight=8 blockId=servos_left
+  //% block="左前" group="基本の動き"
+  export function F_left(): void {
+    pins.servoWritePin(AnalogPin.P13, 140);
+    pins.servoWritePin(AnalogPin.P14, 0);
+  }
+  
   //% color="#3943c6" weight=7 blockId=servos_right
   //% block="右" group="基本の動き"
   export function right(): void {
     pins.servoWritePin(AnalogPin.P13, 180);
     pins.servoWritePin(AnalogPin.P14, 180);
   }
+
+  //% color="#3943c6" weight=7 blockId=servos_right
+  //% block="右前" group="基本の動き"
+  export function F_right(): void {
+    pins.servoWritePin(AnalogPin.P13, 180);
+    pins.servoWritePin(AnalogPin.P14, 50);
+  }
+
 
   //% color="#3943c6" weight=6 blockId=servos_stop
   //% block="止まる" group="基本の動き"
