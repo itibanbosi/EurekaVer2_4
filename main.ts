@@ -628,7 +628,7 @@ namespace eureka_blocks_car {
   }
 
   //% color="#3943c6" weight=10　blockId=servos_forward
-  //% block="前 出力調整 左へ |%le| 右へ" group="基本のうごき"
+  //% block="前 出力調整 左へ |%le| 右へ" group="基本の動き"
   //% le.min=-30 le.max=30
   export function forward(le: number): void {
     pins.servoWritePin(AnalogPin.P14, 30 + le);
@@ -636,28 +636,28 @@ namespace eureka_blocks_car {
   }
 
   //% color="#3943c6" weight=9 blockId=servos_backward
-  //% block="後ろ" group="基本のうごき"
+  //% block="後ろ" group="基本の動き"
   export function backward(): void {
     pins.servoWritePin(AnalogPin.P14, 180);
     pins.servoWritePin(AnalogPin.P13, 0);
   }
 
   //% color="#3943c6" weight=8 blockId=servos_left
-  //% block="左" group="基本のうごき"
+  //% block="左" group="基本の動き"
   export function left(): void {
     pins.servoWritePin(AnalogPin.P13, 0);
     pins.servoWritePin(AnalogPin.P14, 0);
   }
 
   //% color="#3943c6" weight=7 blockId=servos_right
-  //% block="右" group="基本のうごき"
+  //% block="右" group="基本の動き"
   export function right(): void {
     pins.servoWritePin(AnalogPin.P13, 180);
     pins.servoWritePin(AnalogPin.P14, 180);
   }
 
   //% color="#3943c6" weight=6 blockId=servos_stop
-  //% block="止まる" group="基本のうごき"
+  //% block="止まる" group="基本の動き"
   export function stop(): void {
     pins.servoWritePin(AnalogPin.P13, 90);
     pins.servoWritePin(AnalogPin.P14, 90);
