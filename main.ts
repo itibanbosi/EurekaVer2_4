@@ -37,7 +37,8 @@ enum L9110moter {
   gyakuten,
   seisi,
 }
-let con_le=0
+let con_le=0;
+let con_op=100;
 
 //% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.3"
 namespace eureka_blocks {
@@ -632,14 +633,21 @@ namespace eureka_blocks {
   }
 
   //% color="#3943c6" weight=10　blockId=servos_condition
-  //% block="出力調整 左へ |%le| 右へ" group="基本の動き"
+  //% block="左右バランス調整 左へ |%le| 右へ" group="基本の動き"
   //% le.min=-20 le.max=20
   export function condition(le: number): void {
   con_le=le;
     }
-  
+
+  //% color="#3943c6" weight=10　blockId=servos_op
+  //% block="出力調整 |%op|" group="基本の動き"
+  //% op.min=0 op.max=100
+  export function servo_op(op: number): void {
+  con_op=op;
+    }
+
     //% color="#3943c6" weight=10　blockId=servos_forward
-  //% block="前" group="基本の動き"
+  //% block="前 出力|%op| " group="基本の動き"
   export function forward(): void {
     pins.servoWritePin(AnalogPin.P14, 20 + con_le);
     pins.servoWritePin(AnalogPin.P13, 160 + con_le);
