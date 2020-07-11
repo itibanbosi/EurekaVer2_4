@@ -591,7 +591,7 @@ namespace eureka_blocks_car {
       led.enable(false);
       pins.digitalWritePin(DigitalPin.P3, 1);
     } else {
-      led.enable(true);
+      led.enable(false);
       return pins.digitalWritePin(DigitalPin.P3, 0);
     }
   }
