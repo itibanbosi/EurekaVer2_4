@@ -690,6 +690,19 @@ namespace eureka_blocks {
     pins.servoWritePin(AnalogPin.P13, 90+60*(con_op+100)/100+set_lr + con_le);
   }
 
+  //% color="#3943c6" weight=10　blockId=servo_pro_l
+  //% block="左車輪 出力 |%set_l| " group="基本の動き"
+  //% set_l.min=-100 set_l.max=100
+  export function pro_l(set_l : number): void {
+    pins.servoWritePin(AnalogPin.P13, 90-90*set_l/100);
+  }
+
+  //% color="#3943c6" weight=10　blockId=servo_pro_r
+  //% block="右車輪 出力 |%set_r| " group="基本の動き"
+  //% set_r.min=-100 set_r.max=100
+  export function pro_r(set_r : number): void {
+    pins.servoWritePin(AnalogPin.P14, 90+90*set_r/100);
+  }
 
   //% color="#3943c6" weight=5 blockId=servos_neutral
   //% block="サーボをニュートラルにします" group="基本の動き"
