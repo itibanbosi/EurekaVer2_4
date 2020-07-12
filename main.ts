@@ -546,14 +546,14 @@ namespace eureka_blocks {
 
   namespace eureka_blocks_car {
 
-  //% color="#3943c6" weight=99　blockId=servos_condition
+  //% color="#ffa800" weight=99　blockId=servos_condition
   //% block="左右バランス調整 左へ |%le| 右へ" group="1　調整"
   //% le.min=-20 le.max=20
   export function condition(le: number): void {
   con_le=le;
     }
 
-  //% color="#3943c6" weight=97　blockId=servos_op
+  //% color="#ffa800" weight=97　blockId=servos_op
   //% block="出力調整 |%op|" group="1　調整"
   //% op.min=-100 op.max=0  
   export function servo_op(op: number): void {
@@ -656,7 +656,7 @@ namespace eureka_blocks {
         }
   }
 
-  //% weight=22 blockId=sonar_ping_2 block="きょりｾﾝｻ" group="3　センサー"
+  //% color="#009A00" weight=22 blockId=sonar_ping_2 block="きょりｾﾝｻ" group="3　センサー"
   export function ping() {
     // send
     pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
@@ -670,7 +670,7 @@ namespace eureka_blocks {
     return Math.idiv(d, 58);
   }
 
-  //% weight=20 block="きょりが |%limit| cmより小さく" group="3　センサー"
+  //% color="#009A00" weight=20 block="きょりが |%limit| cmより小さく" group="3　センサー"
   //% limit.min=0 limit.max=50
   export function sonar_ping_3(limit: number): boolean {
     // send
@@ -700,7 +700,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#40a6ff" weight=8 blockId=auto_red_LED block="ﾌﾞﾚｰｷﾗﾝﾌﾟ |%mode| " group="4　ライト"
+  //% color="#ff4940" weight=8 blockId=auto_red_LED block="ﾌﾞﾚｰｷﾗﾝﾌﾟ |%mode| " group="4　ライト"
   export function red_LED(mode: onoff) {
     if (mode == onoff.ON) {
       led.enable(false);
