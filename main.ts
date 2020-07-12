@@ -38,7 +38,7 @@ enum L9110moter {
   seisi,
 }
 let con_le=0;
-let con_op=100;
+let con_op=0;
 
 //% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.3"
 namespace eureka_blocks {
