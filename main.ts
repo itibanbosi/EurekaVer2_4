@@ -683,11 +683,13 @@ namespace eureka_blocks {
   }
 
   //% color="#3943c6" weight=10　blockId=servo_program
-  //% block="プログラム 左へ |%set| 右へ" group="基本の動き"
-  //% set.min=-40 set.max=40
+  //% block="左右プログラム 左へ |%set| 右へ" group="基本の動き"
+  //% set.min=-50 set.max=50
   export function program(set: number): void {
-    pins.servoWritePin(AnalogPin.P14, 90 - 90*con_op/100 + set  +con_le);
-    pins.servoWritePin(AnalogPin.P13, 90 + 90*con_op/100 + set  +con_le);
+    pins.servoWritePin(AnalogPin.P14, 90-90*con_op/100 +set  + con_le);    
+    pins.servoWritePin(AnalogPin.P13, 90+90*con_op/100 +set  + con_le);
+
+
   }
 
 
