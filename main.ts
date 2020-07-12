@@ -686,8 +686,9 @@ namespace eureka_blocks {
   //% block="左右プログラム 左へ |%set_lr| 右へ" group="基本の動き"
   //% set_lr.min=-50 set_lr.max=50
   export function program(set_lr:number): void {
-    pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 +set_lr + con_le);    
-    pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 +set_lr + con_le);
+    pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + set_lr + con_le);
+    pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 + set_lr + con_le);
+
 
 
   }
