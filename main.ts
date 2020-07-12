@@ -655,11 +655,9 @@ namespace eureka_blocks {
 
   //% color="#3943c6" weight=9 blockId=servos_backward
   //% block="後ろ" group="基本の動き"
+  export function backward(): void {
     pins.servoWritePin(AnalogPin.P14, 90+90*con_op/100 -20 + con_le);
     pins.servoWritePin(AnalogPin.P13, 90-90*con_op/100 +20 + con_le);
-
-  export function backward(): void {
-
   }
 
   //% color="#3943c6" weight=8 blockId=servos_left
