@@ -636,20 +636,20 @@ namespace eureka_blocks {
     return Math.round((pins.analogReadPin(AnalogPin.P1) / 1023) * 100);
   }
 
-//% color="#d4b41f"  weight=26 block="右ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit| より小さい" group="3　センサー"
-  //% limit.min=0 limit.max=100
-  export function photo_R(limit: number): boolean {
-      if ((pins.analogReadPin(AnalogPin.P2) / 1023) * 100 < limit) {
+//% color="#d4b41f"  weight=26 block="右ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit_R| より小さい" group="3　センサー"
+  //% limit_R.min=0 limit_R.max=100
+  export function photo_R(limit_R: number): boolean {
+      if ((pins.analogReadPin(AnalogPin.P2) / 1023) * 100 < limit_R) {
           return true;
         } else {
           return false;
         }
   }
 
-//% color="#d4b41f"  weight=24 block="左ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit| より小さい" group="3　センサー"
-  //% limit.min=0 limit.max=100
-  export function photo_L(limit: number): boolean {
-      if ((pins.analogReadPin(AnalogPin.P1) / 1023) * 100 < limit) {
+//% color="#d4b41f"  weight=24 block="左ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit_L| より小さい" group="3　センサー"
+  //% limit_L.min=0 limit_L.max=100
+  export function photo_L(limit_L: number): boolean {
+      if ((pins.analogReadPin(AnalogPin.P1) / 1023) * 100 < limit_L) {
           return true;
         } else {
           return false;
