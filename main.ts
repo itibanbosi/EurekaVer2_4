@@ -641,7 +641,7 @@ namespace eureka_blocks {
 
   //% color="#3943c6" weight=10　blockId=servos_op
   //% block="出力調整 |%op|" group="基本の動き"
-  //% op.min=0 op.max=100 op=100  
+  //% op.man=100 op.mix=0  
   export function servo_op(op: number): void {
   con_op=op;
     }
