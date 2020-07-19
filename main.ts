@@ -579,24 +579,48 @@ namespace eureka_blocks {
 
   //% color="#3943c6" weight=68 blockId=servos_backward
   //% block="後ろ" group="2　基本の動き"
-  export function backward(): void {
-    pins.servoWritePin(AnalogPin.P14, 90+90*(con_op+100)/100 -20 + con_le);
-    pins.servoWritePin(AnalogPin.P13, 90-90*(con_op+100)/100 +20 + con_le);
-  }
+ export function backward(): void {
+　  if (con_le >= 0){
+        pins.servoWritePin(AnalogPin.P14, 90+90*(con_op+100)/100 - con_le);
+        pins.servoWritePin(AnalogPin.P13, 90-90*(con_op+100)/100         );
+
+    } 
+    if (con_le < 0){
+        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100         );
+        pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 - con_le);
+
+    }
+   }
 
   //% color="#3943c6" weight=66blockId=servos_left
   //% block="左" group="2　基本の動き"
   export function left(): void {
-    pins.servoWritePin(AnalogPin.P13, 90-90*(con_op+100)/100  +20 + con_le);
-    pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100  +20 + con_le);
+　  if (con_le >= 0){
+        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + con_le);
+        pins.servoWritePin(AnalogPin.P13, 90-90*(con_op+100)/100         );
+
+    } 
+    if (con_le < 0){
+        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100         );
+        pins.servoWritePin(AnalogPin.P13, 90-90*(con_op+100)/100 - con_le);
+
+    }
   }
 
 
   //% color="#3943c6" weight=64 blockId=servos_right
   //% block="右" group="2　基本の動き"
   export function right(): void {
-    pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 -20 + con_le);
-    pins.servoWritePin(AnalogPin.P14, 90+90*(con_op+100)/100 -20 + con_le);
+　  if (con_le >= 0){
+        pins.servoWritePin(AnalogPin.P14, 90+90*(con_op+100)/100 - con_le);
+        pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100         );
+
+    } 
+    if (con_le < 0){
+        pins.servoWritePin(AnalogPin.P14, 90+90*(con_op+100)/100         );
+        pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 + con_le);
+
+    }
   }
 
   //% color="#3943c6" weight=62 blockId=servos_stop
@@ -610,8 +634,8 @@ namespace eureka_blocks {
   //% block="左右プログラム 左へ |%set_lr| 右へ" group="2　基本の動き"
   //% set_lr.min=-30 set_lr.max=30
   export function pro_lr(set_lr : number): void {
-    pins.servoWritePin(AnalogPin.P14, 90-60*(con_op+100)/100+set_lr + con_le);
-    pins.servoWritePin(AnalogPin.P13, 90+60*(con_op+100)/100+set_lr + con_le);
+    pins.servoWritePin(AnalogPin.P14, 90-60*(con_op+100)/100+set_lr) ;
+    pins.servoWritePin(AnalogPin.P13, 90+60*(con_op+100)/100+set_lr) ;
   }
 
   //% color="#3943c6" weight=58　blockId=servo_pro_l
