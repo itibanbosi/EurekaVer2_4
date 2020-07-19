@@ -567,9 +567,13 @@ namespace eureka_blocks {
   export function forward(): void {
 　  if (con_le >= 0){
         pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + con_le);
+        pins.servoWritePin(AnalogPin.P13, 90-90*(con_op+100)/100         );
+
     } 
     if (con_le < 0){
+        pins.servoWritePin(AnalogPin.P14, 90+90*(con_op+100)/100         );
         pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 + con_le);
+
     }
    }
 
