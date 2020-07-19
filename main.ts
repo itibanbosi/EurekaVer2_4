@@ -640,7 +640,7 @@ namespace eureka_blocks {
 
     } 
     if (set_lr < 0){
-        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + set_lr);
+        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 - set_lr);
         pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100         );
     }
   }
