@@ -19,6 +19,7 @@ enum onoff {
   ON,
   OFF,
 }
+
 enum moter_d {
   ﾏｴ,
   ｳｼﾛ,
@@ -285,6 +286,7 @@ namespace eureka_blocks {
         }
     }
   }
+
   //% color="#858585" weight=24 blockId=eureka_m_driver block="ﾓｰﾀｰﾄﾞﾗｲﾊﾞｰ 動き|%mode| |%pin|" group="3_ユーレカ装置"
   export function eureka_m_driver(mode: moter_d, pin: eureka_denki) {
     switch (pin) {
@@ -563,9 +565,13 @@ namespace eureka_blocks {
     //% color="#3943c6" weight=70　blockId=servos_forward
   //% block="前 " group="2　基本の動き"
   export function forward(): void {
-    pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 +20 + con_le);
-    pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 -20 + con_le);
-  }
+　  if (con_le > 0){
+        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + con_le);
+    } 
+    if (con_le < 0){
+        pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 + con_le);
+    }
+   }
 
   //% color="#3943c6" weight=68 blockId=servos_backward
   //% block="後ろ" group="2　基本の動き"
