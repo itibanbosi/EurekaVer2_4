@@ -565,7 +565,7 @@ namespace eureka_blocks {
     //% color="#3943c6" weight=70　blockId=servos_forward
   //% block="前 " group="2　基本の動き"
   export function forward(): void {
-　  if (con_le > 0){
+　  if (con_le >= 0){
         pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + con_le);
     } 
     if (con_le < 0){
