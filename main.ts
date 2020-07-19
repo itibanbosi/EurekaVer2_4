@@ -635,12 +635,12 @@ namespace eureka_blocks {
   //% set_lr.min=-90 set_lr.max=90
   export function pro_lr(set_lr : number): void {
  　  if (set_lr >= 0){
-        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + set_lr);
-        pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100         );
+        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100          );
+        pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100 - set_lr );
 
     } 
     if (set_lr < 0){
-        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 - set_lr);
+        pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + set_lr);
         pins.servoWritePin(AnalogPin.P13, 90+90*(con_op+100)/100         );
     }
   }
