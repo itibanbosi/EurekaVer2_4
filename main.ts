@@ -632,7 +632,7 @@ namespace eureka_blocks {
 
   //% color="#3943c6" weight=60　blockId=servo_pro_lr
   //% block="前進バランス 左へ |%set_lr| 右へ" group="2　基本の動き"
-  //% set_lr.min=-100 set_lr.max=100
+  //% set_lr.min=-90 set_lr.max=90
   export function pro_lr(set_lr : number): void {
  　  if (con_le >= 0){
         pins.servoWritePin(AnalogPin.P14, 90-90*(con_op+100)/100 + set_lr);
