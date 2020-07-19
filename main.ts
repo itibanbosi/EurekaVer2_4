@@ -550,7 +550,7 @@ namespace eureka_blocks {
 
   //% color="#ffa800" weight=99　blockId=servos_condition
   //% block="左右バランス調整 左へ |%le| 右へ" group="1　調整"
-  //% le.min=-40 le.max=40
+  //% le.min=-100 le.max=100
   export function condition(le: number): void {
   con_le=le;
     }
