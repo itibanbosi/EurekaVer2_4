@@ -21,13 +21,13 @@ enum onoff {
 }
 
 enum moter_d {
-  ﾏｴ,
-  ｳｼﾛ,
-  ﾏｴ_ﾋﾀﾞﾘ,
-  ﾏｴ_ﾐｷﾞ,
-  ｳｼﾛ_ﾋﾀﾞﾘ,
-  ｳｼﾛ_ﾐｷﾞ,
-  ﾃｲｼ,
+  両方前,
+  両方後,
+  Ｌだけ前,
+  Ｒだけ前,
+  Ｌだけ後,
+  Ｒだけ後,
+  停止,
 }
 enum etc {
   AKARUSA,
@@ -291,73 +291,73 @@ namespace eureka_blocks {
   export function eureka_m_driver(mode: moter_d, pin: eureka_denki) {
     switch (pin) {
       case eureka_denki.Aﾎﾟｰﾄ:
-        if (mode == moter_d.ﾏｴ) {
+        if (mode == moter_d.両方前) {
           pins.digitalWritePin(DigitalPin.P0, 1);
           pins.digitalWritePin(DigitalPin.P13, 0);
           pins.digitalWritePin(DigitalPin.P14, 1);
         }
-        if (mode == moter_d.ｳｼﾛ) {
+        if (mode == moter_d.両方後) {
           pins.digitalWritePin(DigitalPin.P0, 0);
           pins.digitalWritePin(DigitalPin.P13, 1);
           pins.digitalWritePin(DigitalPin.P14, 0);
         }
-        if (mode == moter_d.ﾏｴ_ﾋﾀﾞﾘ) {
+        if (mode == moter_d.Ｌだけ前) {
           pins.digitalWritePin(DigitalPin.P0, 0);
           pins.digitalWritePin(DigitalPin.P13, 0);
           pins.digitalWritePin(DigitalPin.P14, 1);
         }
-        if (mode == moter_d.ﾏｴ_ﾐｷﾞ) {
+        if (mode == moter_d.Ｒだけ前) {
           pins.digitalWritePin(DigitalPin.P0, 1);
           pins.digitalWritePin(DigitalPin.P13, 0);
           pins.digitalWritePin(DigitalPin.P14, 0);
         }
-        if (mode == moter_d.ｳｼﾛ_ﾋﾀﾞﾘ) {
+        if (mode == moter_d.Ｌだけ後) {
           pins.digitalWritePin(DigitalPin.P0, 0);
           pins.digitalWritePin(DigitalPin.P13, 1);
           pins.digitalWritePin(DigitalPin.P14, 1);
         }
-        if (mode == moter_d.ｳｼﾛ_ﾐｷﾞ) {
+        if (mode == moter_d.Ｒだけ後) {
           pins.digitalWritePin(DigitalPin.P0, 1);
           pins.digitalWritePin(DigitalPin.P13, 1);
           pins.digitalWritePin(DigitalPin.P14, 0);
         }
-        if (mode == moter_d.ﾃｲｼ) {
+        if (mode == moter_d.停止) {
           pins.digitalWritePin(DigitalPin.P0, 0);
           pins.digitalWritePin(DigitalPin.P13, 0);
           pins.digitalWritePin(DigitalPin.P14, 0);
         }
       case eureka_denki.Bﾎﾟｰﾄ:
-        if (mode == moter_d.ﾏｴ) {
+        if (mode == moter_d.両方前) {
           pins.digitalWritePin(DigitalPin.P1, 1);
           pins.digitalWritePin(DigitalPin.P15, 0);
           pins.digitalWritePin(DigitalPin.P16, 1);
         }
-        if (mode == moter_d.ｳｼﾛ) {
+        if (mode == moter_d.両方後) {
           pins.digitalWritePin(DigitalPin.P1, 0);
           pins.digitalWritePin(DigitalPin.P15, 1);
           pins.digitalWritePin(DigitalPin.P16, 0);
         }
-        if (mode == moter_d.ﾏｴ_ﾋﾀﾞﾘ) {
+        if (mode == moter_d.Ｌだけ前) {
           pins.digitalWritePin(DigitalPin.P1, 0);
           pins.digitalWritePin(DigitalPin.P15, 0);
           pins.digitalWritePin(DigitalPin.P16, 1);
         }
-        if (mode == moter_d.ﾏｴ_ﾐｷﾞ) {
+        if (mode == moter_d.Ｒだけ前) {
           pins.digitalWritePin(DigitalPin.P1, 1);
           pins.digitalWritePin(DigitalPin.P15, 0);
           pins.digitalWritePin(DigitalPin.P16, 0);
         }
-        if (mode == moter_d.ｳｼﾛ_ﾋﾀﾞﾘ) {
+        if (mode == moter_d.Ｌだけ後) {
           pins.digitalWritePin(DigitalPin.P1, 0);
           pins.digitalWritePin(DigitalPin.P15, 1);
           pins.digitalWritePin(DigitalPin.P16, 1);
         }
-        if (mode == moter_d.ｳｼﾛ_ﾐｷﾞ) {
+        if (mode == moter_d.Ｒだけ後) {
           pins.digitalWritePin(DigitalPin.P1, 1);
           pins.digitalWritePin(DigitalPin.P15, 1);
           pins.digitalWritePin(DigitalPin.P16, 0);
         }
-        if (mode == moter_d.ﾃｲｼ) {
+        if (mode == moter_d.停止) {
           pins.digitalWritePin(DigitalPin.P1, 0);
           pins.digitalWritePin(DigitalPin.P15, 0);
           pins.digitalWritePin(DigitalPin.P16, 0);
