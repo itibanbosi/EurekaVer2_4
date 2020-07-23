@@ -677,7 +677,7 @@ namespace eureka_blocks {
     return Math.round((pins.analogReadPin(AnalogPin.P1) / 1023) * 100);
   }
 
-//% color="#d4b41f"  weight=26 block="右ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit_R| より小さい" group="3　センサー"
+//% color="#d4b410"  weight=23 block="右ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit_R| より小さい" group="3　センサー"
   //% limit_R.min=0 limit_R.max=100
   export function photo_R(limit_R: number): boolean {
       if ((pins.analogReadPin(AnalogPin.P2) / 1023) * 100 < limit_R) {
@@ -687,7 +687,7 @@ namespace eureka_blocks {
         }
   }
 
-//% color="#d4b41f"  weight=26 block="右が黒線をふんだ" group="3　センサー" group="3　センサー"
+//% color="#d4b410"  weight=24 block="右が黒線をふんだ" group="3　センサー" group="3　センサー"
   export function photo_R_out() : boolean {
       if ((pins.analogReadPin(AnalogPin.P1) / 1023) * 100 > 40  &&  (pins.analogReadPin(AnalogPin.P2) / 1023) * 100 < 40 )  {
           return true;
@@ -705,7 +705,7 @@ namespace eureka_blocks {
         }
   }
 
-//% color="#d4b41f"  weight=24 block="左ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit_L| より小さい" group="3　センサー"
+//% color="#d4b41f"  weight=25 block="左ﾌｫﾄﾘｸﾚｸﾀｰ値 |%limit_L| より小さい" group="3　センサー"
   //% limit_L.min=0 limit_L.max=100
   export function photo_L(limit_L: number): boolean {
       if ((pins.analogReadPin(AnalogPin.P1) / 1023) * 100 < limit_L) {
