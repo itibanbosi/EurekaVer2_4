@@ -730,6 +730,16 @@ namespace eureka_blocks {
     }
   }
 
+  //% color="#ff3d03" weight=12 blockId=auto_led_off block="ﾏｲｸﾛﾋﾞｯﾄのLEDを無効にする" group="4　ライト"
+  export function auto_led_off() {
+      led.enable(false);           
+  }
+
+  //% color="#ff3d03" weight=11 blockId=auto_led_on block="ﾏｲｸﾛﾋﾞｯﾄのLEDを有効にする" group="4　ライト"
+  export function auto_led_on() {
+      led.enable(true);
+  }
+
   //% color="#40a6ff" weight=10 blockId=auto_white_LED block="前照灯 |%mode| " group="4　ライト"
   export function white_LED(mode: onoff) {
     if (mode == onoff.ON) {
