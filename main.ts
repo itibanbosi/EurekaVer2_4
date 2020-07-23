@@ -699,7 +699,7 @@ namespace eureka_blocks {
         }
   }
 
-//% color="#d4e400"  weight=23 block="右が黒線をふんだ" group="3　センサー" group="3　センサー"
+//% color="#d4b4ef"  weight=23 block="右が黒線をふんだ" group="3　センサー" group="3　センサー"
   export function photo_R_out() : boolean {
       if ((pins.analogReadPin(AnalogPin.P1) / 1023) * 100 > 40  &&  (pins.analogReadPin(AnalogPin.P2) / 1023) * 100 < 40 )  {
           return true;
@@ -708,7 +708,7 @@ namespace eureka_blocks {
         }
   }
 
-//% color="#d4e400"  weight=24 block="左が黒線をふんだ" group="3　センサー" group="3　センサー"
+//% color="#d4b4ef"  weight=24 block="左が黒線をふんだ" group="3　センサー" group="3　センサー"
   export function photo_L_out() : boolean {
       if ((pins.analogReadPin(AnalogPin.P1) / 1023) * 100 < 40  &&  (pins.analogReadPin(AnalogPin.P2) / 1023) * 100 > 40 )  {
           return true;
