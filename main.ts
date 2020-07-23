@@ -660,7 +660,7 @@ namespace eureka_blocks {
   }
 
   //% color="#3943c6" weight=54 blockId=servos_neutral
-  //% block="サーボをニュートラルにします" group="2　基本の動き"
+  //% block="サーボをニュートラルする" group="2　基本の動き"
   export function neutral(): void {
     pins.digitalWritePin(DigitalPin.P13, 0);
     pins.digitalWritePin(DigitalPin.P14, 0);
@@ -769,7 +769,7 @@ namespace eureka_blocks {
       led.enable(true);
   }
 
-  //% color="#40a6ff" weight=10 blockId=auto_white_LED block="前照灯 |%mode| " group="4　ライト"
+  //% color="#40a6ff" weight=10 blockId=auto_white_LED block="前＿白LED |%mode| " group="4　ライト"
   export function white_LED(mode: onoff) {
     if (mode == onoff.ON) {
       pins.digitalWritePin(DigitalPin.P3, 1);
@@ -778,7 +778,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#ff4940" weight=8 blockId=auto_red_LED block="ﾌﾞﾚｰｷﾗﾝﾌﾟ |%mode| " group="4　ライト"
+  //% color="#ff4940" weight=8 blockId=auto_red_LED block="後ろ＿赤LED |%mode| " group="4　ライト"
   export function red_LED(mode: onoff) {
     if (mode == onoff.ON) {
       pins.digitalWritePin(DigitalPin.P15, 1);
