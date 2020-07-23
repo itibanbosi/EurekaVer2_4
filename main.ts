@@ -743,10 +743,8 @@ namespace eureka_blocks {
   //% color="#40a6ff" weight=10 blockId=auto_white_LED block="前照灯 |%mode| " group="4　ライト"
   export function white_LED(mode: onoff) {
     if (mode == onoff.ON) {
-      led.enable(false);
       pins.digitalWritePin(DigitalPin.P3, 1);
     } else {
-      led.enable(false);
       return pins.digitalWritePin(DigitalPin.P3, 0);
     }
   }
@@ -754,10 +752,8 @@ namespace eureka_blocks {
   //% color="#ff4940" weight=8 blockId=auto_red_LED block="ﾌﾞﾚｰｷﾗﾝﾌﾟ |%mode| " group="4　ライト"
   export function red_LED(mode: onoff) {
     if (mode == onoff.ON) {
-      led.enable(false);
       pins.digitalWritePin(DigitalPin.P15, 1);
     } else {
-      led.enable(true);
       return pins.digitalWritePin(DigitalPin.P15, 0);
     }
   }
