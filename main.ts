@@ -717,10 +717,14 @@ namespace eureka_blocks {
         }
   }
 
-
-
-
-
+//% color="#6041f1"  weight=25 block="左右どちらも黒線をふんでいない" group="3　センサー" 
+  export function photo_LR_out() : boolean {
+      if ((pins.analogReadPin(AnalogPin.P1) / 1023) * 100 > 40  &&  (pins.analogReadPin(AnalogPin.P2) / 1023) * 100 > 40 )  {
+          return true;
+        } else {
+          return false;
+        }
+  }
 
   //% color="#009A00" weight=22 blockId=sonar_ping_2 block="きょりｾﾝｻ" group="3　センサー"
   export function ping() {
