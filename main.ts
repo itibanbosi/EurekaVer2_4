@@ -184,7 +184,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#ff3d03" weight=25 blockId=eureka_buz_set block="ﾕｰﾚｶIOで音をならす" group="3_ユーレカ装置"
+  //% color="#ff3d03" weight=60 blockId=eureka_buz_set block="ﾕｰﾚｶIOで音をならす" group="0_初期設定"
   export function eureka_buz_set() {
     pins.analogSetPitchPin(AnalogPin.P8);
   }
