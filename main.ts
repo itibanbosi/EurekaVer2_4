@@ -43,6 +43,12 @@ let con_op=0;
 
 //% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.4"
 namespace eureka_blocks {
+
+  //% color="#ff3d03" weight=59 blockId=eureka_buz_set block="ﾕｰﾚｶIOで音をならす" group="1_初期設定"
+  export function eureka_buz_set() {
+    pins.analogSetPitchPin(AnalogPin.P8);
+  }
+
   //% color="#4741f1" weight=54 blockId=eureka_tl_blue block="青信号 点灯|%mode| |%pin|" group="2_信号機ユニット"
   export function eureka_tl_blue(mode: onoff, pin: eureka_tlp) {
     switch (pin) {
@@ -184,10 +190,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#ff3d03" weight=59 blockId=eureka_buz_set block="ﾕｰﾚｶIOで音をならす" group="1_初期設定"
-  export function eureka_buz_set() {
-    pins.analogSetPitchPin(AnalogPin.P8);
-  }
+
 
   //% color="#6041f1"  weight=23 blockId=eureka_L9110 block="ﾓｰﾀｰL |%mode| |%pin|" group="4_ユーレカ装置"
   //% mode.min=-100 mode.max=100
