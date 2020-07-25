@@ -41,7 +41,7 @@ enum L9110moter {
 let con_le=0;
 let con_op=0;
 
-//% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.3"
+//% color="#74ad1d" block="ﾕｰﾚｶﾌﾞﾛｯｸ2.4"
 namespace eureka_blocks {
   //% color="#4741f1" weight=54 blockId=eureka_tl_blue block="青信号 点灯|%mode| |%pin|" group="1_信号機ユニット"
   export function eureka_tl_blue(mode: onoff, pin: eureka_tlp) {
