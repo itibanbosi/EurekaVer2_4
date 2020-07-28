@@ -157,7 +157,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#009A00"  weight=24 blockId=eureka_denkihuman block="人感ｾﾝｻ |%pin|" group="3_電気の利用ユニット"
+  //% color="#009A00"  weight=24 blockId=eureka_denkihuman block="人感ｾﾝｻ値 |%pin|" group="3_電気の利用ユニット"
   export function eureka_denkihuman(pin: eureka_denki): number {
     switch (pin) {
       case eureka_denki.Aﾎﾟｰﾄ:
@@ -365,7 +365,7 @@ namespace eureka_blocks {
     }
   }
 
-  //% color="#d4b41f"  weight=7 blockId=eureka_light block="単体_光ｾﾝｻ |%pin|" group="5_センサの値"
+  //% color="#d4b41f"  weight=7 blockId=eureka_light block="単体_光ｾﾝｻ値 |%pin|" group="5_センサの値"
   export function tantai_light(pin: eureka_IO): number {
     switch (pin) {
       case eureka_IO.Aﾎﾟｰﾄ:
@@ -436,7 +436,7 @@ namespace eureka_blocks {
         break;
     }
   }
-  //% color="#858585" weight=9 blockId=eureka_human block="単体_人感ｾﾝｻ |%pin|" group="5_センサの値"
+  //% color="#858585" weight=9 blockId=eureka_human block="単体_人感ｾﾝｻ値 |%pin|" group="5_センサの値"
   export function eureka_human(pin: eureka_IO): number {
     switch (pin) {
       case eureka_IO.Aﾎﾟｰﾄ:
