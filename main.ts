@@ -136,9 +136,6 @@ namespace eureka_blocks {
     }
   }
   //% color="#009A00" weight=25 block="人が動いたら |%pin|" group="2_電気の利用ユニット"
-  if (true) {
-  } else {
-  }
   export function humanDetection(pin: eureka_p1416): boolean {
     pins.setPull(DigitalPin.P14, PinPullMode.PullNone);
     pins.setPull(DigitalPin.P16, PinPullMode.PullNone);
